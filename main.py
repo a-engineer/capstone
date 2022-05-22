@@ -39,7 +39,7 @@ with dataset:
 	st.write(nullvalues)
 
 with features:
-	st.header('The features I created')
+	st.header('The features I created for this project.')
 
 with modelTraining:
 	st.header('Time to train model!')
