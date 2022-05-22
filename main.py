@@ -42,7 +42,7 @@ with features:
 	st.header('The features I created for this project.')
 
 with modelTraining:
-	st.header('Time to train model!')
+	st.header('Time to train the model!')
 	st.text('Description of variables.')
 
 sel_col, disp_col = st.columns(2)
