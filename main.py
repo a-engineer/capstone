@@ -45,7 +45,7 @@ with dataset:
 
      # Can be used wherever a "file-like" object is accepted:
     		df = pd.read_csv(uploaded_file)
-    		st.write(dataframe)
+    		st.write(df.head())
 
 	st.subheader('Uploaded file\'s first five rows of data.')
 
