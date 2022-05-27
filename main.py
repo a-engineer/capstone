@@ -38,13 +38,8 @@ with dataset:
 
 	st.subheader('Uploaded file\'s first five rows of data.')
 
-	taxi_data = pd.read_csv('Tutorial/data/employee productivity v2.csv')
-	
-	st.subheader('The following is the first five rows of the dataset.')
-	st.write(taxi_data.head())
-
 	st.subheader('Number of null values.')
-	nullvalues = taxi_data.isnull().sum()
+	nullvalues = df.isnull().sum()
 	st.write(nullvalues)
 
 with features:
