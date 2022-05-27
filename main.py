@@ -47,7 +47,7 @@ with dataset:
     		df = pd.read_csv(uploaded_file)
     		st.write(dataframe)
 
-    st.subheader('Uploaded file\'s first five rows of data'.)
+    st.subheader('Uploaded file\'s first five rows of data.')
 
 	taxi_data = pd.read_csv('Tutorial/data/employee productivity v2.csv')
 	
