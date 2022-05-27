@@ -1,11 +1,6 @@
 import streamlit as st
 import pandas as pd
 
-header  = st.container()
-dataset = st.container()
-features = st.container()
-modelTraining = st.container()
-
 uploaded_file = st.file_uploader("Choose a file")
 if uploaded_file is not None:
      # To read file as bytes:
@@ -23,6 +18,12 @@ if uploaded_file is not None:
      # Can be used wherever a "file-like" object is accepted:
      dataframe = pd.read_csv(uploaded_file)
      st.write(dataframe)
+
+
+header  = st.container()
+dataset = st.container()
+features = st.container()
+modelTraining = st.container()
 
 with header:
 	st.markdown("<h1 style='text-align: center; color: black;'>Welcome to my Data Science Capstone!</h1>", unsafe_allow_html=True)
