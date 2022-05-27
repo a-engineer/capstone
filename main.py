@@ -34,13 +34,12 @@ with dataset:
 	if uploaded_file is not None:
      # Can be used wherever a "file-like" object is accepted:
     		df = pd.read_csv(uploaded_file)
+    		st.subheader('Uploaded file\'s first five rows of data.')
     		st.write(df.head())
+    		st.subheader('Number of null values.')
     		nullvalues = df.isnull().sum()
     		st.write(nullvalues)
 
-	st.subheader('Uploaded file\'s first five rows of data.')
-
-	st.subheader('Number of null values.')
 	
 
 with features:
