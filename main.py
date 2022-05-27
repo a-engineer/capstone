@@ -7,6 +7,8 @@ dataset = st.container()
 features = st.container()
 modelTraining = st.container()
 
+st.file_uploader(label, type=None, accept_multiple_files=False, key=None, help=None, on_change=None, args=None, kwargs=None, *, disabled=False)
+
 with header:
 	st.markdown("<h1 style='text-align: center; color: black;'>Welcome to my Data Science Capstone!</h1>", unsafe_allow_html=True)
 
