@@ -36,11 +36,12 @@ with dataset:
     		df = pd.read_csv(uploaded_file)
     		st.write(df.head())
     		nullvalues = df.isnull().sum()
+    		st.write(nullvalues)
 
 	st.subheader('Uploaded file\'s first five rows of data.')
 
 	st.subheader('Number of null values.')
-	st.write(nullvalues)
+	
 
 with features:
 	st.header('The features I created for this project.')
