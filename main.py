@@ -35,11 +35,11 @@ with dataset:
      # Can be used wherever a "file-like" object is accepted:
     		df = pd.read_csv(uploaded_file)
     		st.write(df.head())
+    		nullvalues = df.isnull().sum()
 
 	st.subheader('Uploaded file\'s first five rows of data.')
 
 	st.subheader('Number of null values.')
-	nullvalues = df.isnull().sum()
 	st.write(nullvalues)
 
 with features:
