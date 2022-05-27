@@ -1,24 +1,6 @@
 import streamlit as st
 import pandas as pd
 
-uploaded_file = st.file_uploader("Choose a file")
-if uploaded_file is not None:
-     # To read file as bytes:
-     bytes_data = uploaded_file.getvalue()
-     st.write(bytes_data)
-
-     # To convert to a string based IO:
-     stringio = StringIO(uploaded_file.getvalue().decode("utf-8"))
-     st.write(stringio)
-
-     # To read file as string:
-     string_data = stringio.read()
-     st.write(string_data)
-
-     # Can be used wherever a "file-like" object is accepted:
-     dataframe = pd.read_csv(uploaded_file)
-     st.write(dataframe)
-
 
 header  = st.container()
 dataset = st.container()
@@ -46,6 +28,24 @@ with dataset:
 	st.markdown('* task3_hrs = This task represents the amount of time an employee spent on training.')
 	st.markdown('* task4_hrs = This task represents the amount of time an employee spent on emergenecy work.')
 	st.markdown('* productivity = This represents the total yearly productivity of that employee.')
+
+uploaded_file = st.file_uploader("Choose a file")
+if uploaded_file is not None:
+     # To read file as bytes:
+     bytes_data = uploaded_file.getvalue()
+     st.write(bytes_data)
+
+     # To convert to a string based IO:
+     stringio = StringIO(uploaded_file.getvalue().decode("utf-8"))
+     st.write(stringio)
+
+     # To read file as string:
+     string_data = stringio.read()
+     st.write(string_data)
+
+     # Can be used wherever a "file-like" object is accepted:
+     dataframe = pd.read_csv(uploaded_file)
+     st.write(dataframe)
 
 	taxi_data = pd.read_csv('Tutorial/data/employee productivity v2.csv')
 	
