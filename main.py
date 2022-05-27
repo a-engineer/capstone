@@ -44,8 +44,10 @@ with dataset:
     		st.write(string_data)
 
      # Can be used wherever a "file-like" object is accepted:
-    		dataframe = pd.read_csv(uploaded_file)
+    		df = pd.read_csv(uploaded_file)
     		st.write(dataframe)
+
+    st.subheader('Uploaded file\'s first five rows of data'.)
 
 	taxi_data = pd.read_csv('Tutorial/data/employee productivity v2.csv')
 	
