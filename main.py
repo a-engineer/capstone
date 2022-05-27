@@ -29,8 +29,8 @@ with dataset:
 	st.markdown('* task4_hrs = This task represents the amount of time an employee spent on emergenecy work.')
 	st.markdown('* productivity = This represents the total yearly productivity of that employee.')
 
-uploaded_file = st.file_uploader("Choose a file")
-if uploaded_file is not None:
+	uploaded_file = st.file_uploader("Choose a file")
+	if uploaded_file is not None:
      # To read file as bytes:
      bytes_data = uploaded_file.getvalue()
      st.write(bytes_data)
