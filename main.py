@@ -27,9 +27,9 @@ if authentication_status == None:
 
 if authentication_status:
 
-	authenticator.logout("Logout", "sidebar")
-	st.sidebar.title(f"Welcome {name}")
-	st.sidebar.header("Logout Here")
+	#authenticator.logout("Logout", "sidebar")
+	#st.sidebar.title(f"Welcome {name}")
+	#st.sidebar.header("Logout Here")
 	header  = st.container()
 	dataset = st.container()
 	features = st.container()
