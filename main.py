@@ -2,7 +2,7 @@ import pickle
 from pathlib import Path
 
 import streamlit as st
-import streamlit_authenticator as stauth
+import streamlit-authenticator as stauth
 import pandas as pd
 
 header  = st.container()
