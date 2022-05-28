@@ -3,6 +3,8 @@ import pandas as pd
 import streamlit as st
 import streamlit_authenticator as stauth
 
+
+
 #---------Password Login------------
 names = ['John Smith','Rebecca Briggs']
 usernames = ['jsmith','rbriggs']
@@ -51,5 +53,22 @@ predict employee productivity.''')
     uploaded_file = st.file_uploader("Choose a file") 
     if uploaded_file is not None:
 		# Can be used wherever a "file-like" object is accepted:
-	   	df = pd.read_csv(uploaded_file); st.subheader('Uploaded file\'s first five rows of data.'); st.write(df.head()); st.subheader('Number of null values.'); nullvalues = df.isnull().sum();st.write(nullvalues)	
+	   	df = pd.read_csv(uploaded_file); st.subheader('Uploaded file\'s first five rows of data.'); st.table(df.head()); st.subheader('Number of null values.'); nullvalues = df.isnull().sum();st.write(nullvalues); \
+        x = df.columns; \
+        st.subheader('Variable Names'); \
+        st.table(x); \
+        st.multiselect('Select Independent Variables',x); \
+        st.multiselect('Select Dependent Variables',x);
 
+    # Using object notation
+    add_selectbox = st.sidebar.selectbox(
+        "How would you like to be contacted?",
+        ("Email", "Home phone", "Mobile phone")
+         )
+
+    # Using "with" notation
+    #with st.sidebar:
+    add_radio = st.sidebar.radio(
+        "Choose a shipping method",
+        ("Standard (5-15 days)", "Express (2-5 days)")
+        )
