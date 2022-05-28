@@ -14,8 +14,8 @@ with header:
 
 	#st.title('Welcome to my Data Science Capstone!')
 	st.text('''In this project, I will take historical employee productivity data
-	and create a multiple linear regression model to be able to
-	predict employee productivity.
+and create a multiple linear regression model to be able to
+predict employee productivity.
 		''')
 
 with dataset:
