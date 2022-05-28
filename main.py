@@ -1,6 +1,4 @@
 import streamlit as st
-import streamlit_authenticator as stauth
-
 
 header  = st.container()
 dataset = st.container()
