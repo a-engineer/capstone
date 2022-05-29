@@ -29,8 +29,20 @@ if authentication_status == None:
 	st.warning('Please enter your username and password')
 
 if authentication_status:
+    st.sidebar.write('Welcome *%s*' % (name))
     authenticator.logout('Logout', 'sidebar')
-    st.write('Welcome *%s*' % (name))
+    # Using object notation
+    add_selectbox = st.sidebar.selectbox(
+        "How would you like to be contacted?",
+        ("Email", "Home phone", "Mobile phone")
+         )
+
+    # Using "with" notation
+    #with st.sidebar:
+    add_radio = st.sidebar.radio(
+        "Choose a shipping method",
+        ("Standard (5-15 days)", "Express (2-5 days)")
+        )
     with header: 
         st.markdown("<h1 style='text-align: center; color: black;'>Welcome to my Data Science Capstone!</h1>", unsafe_allow_html=True) 
         st.text('''In this project, I will take historical employee productivity data
@@ -52,23 +64,40 @@ predict employee productivity.''')
     st.subheader('Choose a file to upload.') 
     uploaded_file = st.file_uploader("Choose a file") 
     if uploaded_file is not None:
-		# Can be used wherever a "file-like" object is accepted:
-	   	df = pd.read_csv(uploaded_file); st.subheader('Uploaded file\'s first five rows of data.'); st.table(df.head()); st.subheader('Number of null values.'); nullvalues = df.isnull().sum();st.write(nullvalues); \
-        x = df.columns; \
-        st.subheader('Variable Names'); \
-        st.table(x); \
-        st.multiselect('Select Independent Variables',x); \
-        st.multiselect('Select Dependent Variables',x);
+        
+        # Reads an uploaded file
+        df = pd.read_csv(uploaded_file)
 
-    # Using object notation
-    add_selectbox = st.sidebar.selectbox(
-        "How would you like to be contacted?",
-        ("Email", "Home phone", "Mobile phone")
-         )
+        # Displays the first five rows
+        st.subheader('Uploaded files first five rows of data.')
+        st.table(df.head())
+        
+        # Displays the null values
+        st.subheader("Number of null values.")
+        nullvalues = df.isnull().sum()
+        st.write(nullvalues)
 
-    # Using "with" notation
-    #with st.sidebar:
-    add_radio = st.sidebar.radio(
-        "Choose a shipping method",
-        ("Standard (5-15 days)", "Express (2-5 days)")
-        )
+        # Counts number of columns/variables
+        x = df.columns
+        x_len = len(x)
+
+        # Uses length of of columns to create a checkbox for loop
+        import array as arr
+        st.subheader("Select Independent Variables:")
+        z = []
+        y = []
+        for y in range(x_len):
+            z.append(st.checkbox(x[y]))
+        z[0]
+        z[1]
+            
+
+
+        
+            
+
+
+
+    
+
+    
