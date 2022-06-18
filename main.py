@@ -49,7 +49,7 @@ if st.button("Example Dataset"):
     df = pd.read_csv("employee productivity v2.csv") 
 
 uploaded_file = st.file_uploader("Choose a file") 
-if uploaded_file is not None:
+#if uploaded_file is not None:
 
 # Cache dataset
 # @st.cache
