@@ -52,11 +52,11 @@ uploaded_file = st.file_uploader("Choose a file")
 if uploaded_file is not None:
 
 # Cache dataset
-    @st.cache
-    def get_data():
-        # Reads an uploaded file
-        df = pd.read_csv(uploaded_file)
-        return df
+# @st.cache
+def get_data():
+    # Reads an uploaded file
+    df = pd.read_csv(uploaded_file)
+    return df
 
 # Displays the first five rows
 df = get_data()
