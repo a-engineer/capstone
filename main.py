@@ -58,7 +58,7 @@ while True:
         break
     if uploaded_file is not None:
         @st.cache
-        def get_data()
+        def get_data():
             # Reads an uploaded file
             df = pd.read_csv(uploaded_file)
             return df
