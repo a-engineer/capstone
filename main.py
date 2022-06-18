@@ -47,10 +47,10 @@ st.subheader('Choose a file to upload or Select Example Dataset Button.')
 
 if st.button("Example Dataset"):
     df = pd.read_csv("employee productivity v2.csv") 
+    # Displays the first five rows
+    st.subheader('Uploaded files first five rows of data.')
+    st.table(df.head())
 
 uploaded_file = st.file_uploader("Choose a file") 
 #if uploaded_file is not None:
 
-# Displays the first five rows
-st.subheader('Uploaded files first five rows of data.')
-st.table(df.head())
