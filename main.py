@@ -54,6 +54,9 @@ if uploaded_file is not None:
         df = pd.read_csv(uploaded_file)
         return df
 
+    st.subheader('First five rows of data.')
+    st.table(df.head())
+
 if st.button("Example Dataset"):
     df = pd.read_csv("employee productivity v2.csv") 
     # Displays the first five rows
