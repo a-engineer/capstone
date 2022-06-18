@@ -64,8 +64,8 @@ else:
 if df.empty:
     df = get_data()
 else:
-st.subheader('First five rows of data.')
-st.table(df.head())
+    st.subheader('First five rows of data.')
+    st.table(df.head())
 
 
 
