@@ -43,7 +43,8 @@ with dataset:
     st.markdown('* task4_hrs = This task represents the amount of time an employee spent on emergenecy work.') 
     st.markdown('* productivity = This represents the total yearly productivity of that employee.')
 
-st.subheader('Choose a file to upload.') 
+st.subheader('Choose a file to upload or Select Example.')
+st.button("Example Dataset") 
 uploaded_file = st.file_uploader("Choose a file") 
 if uploaded_file is not None:
     # Cache dataset
