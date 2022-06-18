@@ -55,7 +55,7 @@ while True:
             df = pd.read_csv("employee productivity v2.csv") 
             return df
         df = sample_data()
-        break
+    break
     if uploaded_file is not None:
         @st.cache
         def get_data():
@@ -63,7 +63,7 @@ while True:
             df = pd.read_csv(uploaded_file)
             return df
         df = get_data()
-        break
+    break
 
 st.subheader('First five rows of data.')
 st.table(df.head())
