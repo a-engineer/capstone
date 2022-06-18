@@ -48,7 +48,7 @@ st.subheader('Choose a file to upload or Select Example Dataset Button.')
 A = st.button("Example Dataset")
 uploaded_file = st.file_uploader("Choose a file")
 
-while uploaded_file is not None:
+while A value = False:
     if A:
         @st.cache
         def sample_data():
@@ -64,8 +64,6 @@ while uploaded_file is not None:
             return df
         df = get_data()
         break
-    break
-break
 
 st.subheader('First five rows of data.')
 st.table(df.head())
