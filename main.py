@@ -28,7 +28,7 @@ add_radio = st.sidebar.radio("Choose a shipping method",("Standard (5-15 days)",
 
 with header:
     st.markdown("<h1 style='text-align: center; color: black;'>Welcome to my Data Science Capstone!</h1>", unsafe_allow_html=True) 
-    st.text('In this project, I will take historical employee productivity data and create a multiple linear regression model to be able to predict employee productivity.')
+    st.text('In this project, I will take historical employee productivity data and create a \nmultiple linear regression model to be able to predict employee productivity.')
 
 with dataset: 
     st.header('Employee Productivity Data') 
