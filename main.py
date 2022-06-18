@@ -49,7 +49,7 @@ st.button("Example Dataset")
 uploaded_file = st.file_uploader("Choose a file")
 
 while True:
-    if st.button("Example Dataset")
+    if st.button("Example Dataset"):
         @st.cache
         def sample_data():
             df = pd.read_csv("employee productivity v2.csv") 
