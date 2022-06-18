@@ -61,11 +61,10 @@ else:
             df = pd.read_csv(uploaded_file)
             return df
 
-if df is not None:
-    # Displays the first five rows
-    df = get_data()
-    st.subheader('First five rows of data.')
-    st.table(df.head())
+        # Displays the first five rows
+        df = get_data()
+        st.subheader('First five rows of data.')
+        st.table(df.head())
 
 
 
