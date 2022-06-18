@@ -48,7 +48,7 @@ st.subheader('Choose a file to upload or Select Example Dataset Button.')
 A = st.button("Example Dataset")
 uploaded_file = st.file_uploader("Choose a file")
 
-while A is not True:
+while uploaded_file is not None:
     if A:
         @st.cache
         def sample_data():
