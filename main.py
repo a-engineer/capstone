@@ -45,7 +45,8 @@ with dataset:
 
 st.subheader('Choose a file to upload or Select Example Dataset Button.')
 
-df = pd.read_csv("employee productivity v2.csv") 
+if st.button("Example Dataset"):
+    df = pd.read_csv("employee productivity v2.csv") 
 
 uploaded_file = st.file_uploader("Choose a file") 
 #if uploaded_file is not None:
