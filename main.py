@@ -45,11 +45,11 @@ with dataset:
 
 st.subheader('Choose a file to upload or Select Example Dataset Button.')
 
-st.button("Example Dataset", key=A)
+A = st.button("Example Dataset")
 uploaded_file = st.file_uploader("Choose a file")
 
 while True:
-    if st.button(key=A):
+    if A:
         @st.cache
         def sample_data():
             df = pd.read_csv("employee productivity v2.csv") 
