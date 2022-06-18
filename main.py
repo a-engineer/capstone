@@ -45,7 +45,6 @@ with dataset:
 
 st.subheader('Choose a file to upload or Select Example Dataset Button.')
 
-st.button("Example Dataset")
 uploaded_file = st.file_uploader("Choose a file")
 
 while True:
