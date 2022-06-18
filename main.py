@@ -25,18 +25,4 @@ add_radio = st.sidebar.radio("Choose a shipping method",("Standard (5-15 days)",
 with header: 
     st.markdown("<h1 style='text-align: center; color: black;'>Welcome to my Data Science Capstone!</h1>", unsafe_allow_html=True) 
     st.text('In this project, I will take historical employee productivity data and create a multiple linear regression model to be able to predict employee productivity.')
-    
-with dataset: 
-    st.header('Employee Productivity Data') 
-    st.text('This data has nine columns with the following information:') 
-    st.markdown('* employee = In the real data this would actually be the employee\'s name.') 
-    st.markdown('* reg_hours = This represents the number of regular hours that an employee worked.') 
-    st.markdown('* ot_hours = This represents the number of overtime that an employee worked.') 
-    st.markdown('* vac_hours = This represents the number of vacation hours that an employee took.') 
-    st.markdown('* task1_hrs = This task represents the amount of time an employee spent on new business work.') 
-    st.markdown('* task2_hrs = This task represents the amount of time an employee spent on maintenance work.') 
-    st.markdown('* task3_hrs = This task represents the amount of time an employee spent on training.') 
-    st.markdown('* task4_hrs = This task represents the amount of time an employee spent on emergenecy work.') 
-    st.markdown('* productivity = This represents the total yearly productivity of that employee.')
-    
-    
+        
