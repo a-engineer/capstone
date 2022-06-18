@@ -60,8 +60,8 @@ else:
 
         # Displays the first five rows
         df = get_data()
-        st.subheader('First five rows of data.')
-        st.table(df.head())
+st.subheader('First five rows of data.')
+st.table(df.head())
 
 
 
