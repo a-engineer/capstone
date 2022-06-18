@@ -53,7 +53,9 @@ if uploaded_file is not None:
         # Reads an uploaded file
         df = pd.read_csv(uploaded_file)
         return df
-
+    
+    # Displays the first five rows
+    df = get_data()
     st.subheader('First five rows of data.')
     st.table(df.head())
 
