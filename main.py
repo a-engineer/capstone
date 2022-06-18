@@ -15,6 +15,10 @@ import streamlit as st
 import streamlit_authenticator as stauth
 import statsmodels.api as sm
 
+header  = st.container()
+dataset = st.container()
+features = st.container()
+modelTraining = st.container()
 
 add_selectbox = st.sidebar.selectbox("How would you like to be contacted?",("Email", "Home phone", "Mobile phone"))
 
