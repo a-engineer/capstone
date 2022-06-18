@@ -64,6 +64,8 @@ while uploaded_file is not None:
             return df
         df = get_data()
         break
+    break
+break
 
 st.subheader('First five rows of data.')
 st.table(df.head())
