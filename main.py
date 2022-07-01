@@ -104,7 +104,7 @@ with dataset:
         else: # If cat_var is not empty then write the variables
             st.table(cat_var)
 
-        ind_v = ['reg_hours','ot_hours']
+        ind_v = ['reg_hours','ot_hours','vac_hours','task1_hrs','task2_hrs','task3_hrs','task4_hrs']
         dep_v = ['productivity']
         st.subheader("Independent Variables:")
         st.table(ind_v)
