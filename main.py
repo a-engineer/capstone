@@ -104,26 +104,8 @@ with dataset:
         else: # If cat_var is not empty then write the variables
             st.table(cat_var)
 
-        # Uses length of of columns to create a checkbox for loop
-        import array as arr
-        st.subheader("Select Independent Variables:")
-        z = []
-        y = []
-        ind_v = []
-        for y in range(col_len):
-            z.append(st.checkbox(col_nam[y]))
-            if z[y] == True:
-                ind_v.append(col_nam[y])
-        st.subheader("Select Dependent Variables:")
-        a = []
-        b = []
-        dep_v = []
-        count = 0
-        for b in range(col_len):
-            a.append(st.checkbox(col_nam[b],key = b))
-            count += 1
-            if a[b] == True:
-                dep_v.append(col_nam[b])
+        ind_v = ['reg_hours','ot_hours']
+        dep_v = ['productivity']
         st.subheader("Independent Variables:")
         st.table(ind_v)
         st.subheader("Dependent Variables:")
