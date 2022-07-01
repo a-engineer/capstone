@@ -52,7 +52,37 @@ with dataset:
     
     if st.button('Sample Data'):
         df = pd.read_csv("employee productivity v2.csv")
+        st.subheader('Uploaded files first five rows of data.')
+        st.table(df.head())
 
+        # Counts number of columns/variables
+        col_nam = df.columns
+        col_len = len(col_nam)
+
+        # See the data types for each variable
+        st.subheader('Data Types')
+        d = []
+        cat_var = []
+        for c in range(col_len):
+            st.write(col_nam[c])
+            st.write(df[col_nam[c]].dtype)       
+            d.append(df[col_nam[c]].dtype)
+            if d[c] == 'object':
+                cat_var.append(col_nam[c])
+
+        # Displays the null values
+        st.subheader("Number of null values.")
+        nullvalues = df.isnull().sum()
+        st.write(nullvalues)
+
+        # How to handle missing values
+        # https://towardsdatascience.com/7-ways-to-handle-missing-values-in-machine-learning-1a6326adf79e
+        st.subheader("Select Option To Deal With Null Values")
+        option = st.selectbox(
+            "Select Null Value Imputation Method",
+            ('Delete Row','Replace W/ Mean/Median','Deep Learning-Datawig'))
+        st.write('You Selected:', option)
+    
     st.subheader('Choose a file to upload.') 
     uploaded_file = st.file_uploader("Choose a file") 
     if uploaded_file is not None:
