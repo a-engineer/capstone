@@ -82,7 +82,7 @@ with dataset:
             "Select Null Value Imputation Method",
             ('Delete Row','Replace W/ Mean/Median','Deep Learning-Datawig'))
         st.write('You Selected:', option)
-    
+    else:
     st.subheader('Choose a file to upload.') 
     uploaded_file = st.file_uploader("Choose a file") 
     if uploaded_file is not None:
