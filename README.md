@@ -2,10 +2,12 @@
 
 This project aims to predict employee producitivity by using historical data and by employing a multiple linear regression model.
 
-Business Problem: 
+**Business Problem**:
+
 The author currently performs employee productivity projections.  These projections are used to budget additional labor and material.  However, the current method is to use a three year average to predict future projections.  The problem with this method is that the data has outliers and null values that will cause the projections to be over and under by a significant amount.  This results in not enough material being ordered or too much being ordered.  It also results in hiring too many employees or not enough employees to meet the projected productivity demand.
 
-Business Solution:
+**Business Solution**:
+
 As a result, the author decided to apply a multiple linear regression model to increase the accuracy of predicting employee productivity.  The author will clean the data, identify outliers, identify correlations, remove null values, perform assumption testing, and output performance metrics to help the user identify the accuracy of the model.  With this new method the author hopes to increase the accuracy of the employee productivity projections to avoid ordering too much or too little material and to hire the right amount of employees to work that productivity.
 
 The dataset will be supplied by the author's work management system and has the following information:
