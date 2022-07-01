@@ -13,14 +13,22 @@ The dataset will be supplied by the author's work management system and has the 
 Employee Productivity Data
 This data has nine columns with the following information: 
 
-  employee = In the real data this would actually be the employee\'s name.
+  employee = In the real data this would actually be the employee's name.
+  
   reg_hours = This represents the number of regular hours that an employee worked. 
+  
   ot_hours = This represents the number of overtime that an employee worked.
+  
   vac_hours = This represents the number of vacation hours that an employee took.
+  
   task1_hrs = This task represents the amount of time an employee spent on new business work. 
+  
   task2_hrs = This task represents the amount of time an employee spent on maintenance work. 
+  
   task3_hrs = This task represents the amount of time an employee spent on training.
-  task4_hrs = This task represents the amount of time an employee spent on emergenecy work. 
+  
+  task4_hrs = This task represents the amount of time an employee spent on emergenecy work.
+  
   productivity = This represents the total yearly productivity of that employee.
   
 The data product will perform the following functions:
