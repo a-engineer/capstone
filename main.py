@@ -23,11 +23,11 @@ modelTraining = st.container()
 
 
 # Using object notation
-add_selectbox = st.sidebar.selectbox("How would you like to be contacted?",("Email", "Home phone", "Mobile phone"))
+#add_selectbox = st.sidebar.selectbox("Select Machine Learning Algorithm",("Linear Regression", "Multiple Linear Regression", "Logistic Regression"))
 
 # Using "with" notation
 #with st.sidebar:
-add_radio = st.sidebar.radio("Choose a shipping method",("Standard (5-15 days)", "Express (2-5 days)"))
+add_radio = st.sidebar.radio("Select Machine Learning Algorithm (Future Update)",("Linear Regression", "Multiple Linear Regression","Logistic Regression"))
     
 with header: 
     st.markdown("<h1 style='text-align: center; color: black;'>Welcome to my Data Science Capstone!</h1>", unsafe_allow_html=True) 
