@@ -49,7 +49,9 @@ with dataset:
     st.markdown('* productivity = This represents the total yearly productivity of that employee.')
     
     st.subheader("Select Sample Data or Upload Data")
-    st.button('Sample Data')
+    
+    if st.button('Sample Data'):
+        df = pd.read_csv("employee productivity v2.csv")
 
     st.subheader('Choose a file to upload.') 
     uploaded_file = st.file_uploader("Choose a file") 
